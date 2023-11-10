@@ -2,12 +2,20 @@
 
 **HelmholtzEquation** is a FEM code implemented in [Julia](https://julialang.org/) language to compute the pressure field of a $2D$ Helmholtz problem with mixed boundary conditions.
 
-In the present code, the numerical simulation of a $2D$ homogeneous problem with mixed boundary conditions is implemented. Helmholtz equation:
+Helmholtz equation:
 
 <h align="center">
 <p class="mathjax"  id="Heq">
 
-\(\left. -\triangle \, u(x,y) - k^2\,u(x,y)=0 \,\,\,\,(1) \right.\)
+\(-\triangle \ u(x,y) - k^2\ u(x,y)=0 \ \ \ \ (1) \)
+</p>
+</h>
+
+<h align="center">
+<p class="mathjax"  id="Heq">
+
+\left -\triangle \ u(x,y) - k^2\ u(x,y)=0 \ \ \ \ (1) \right
+
 </p>
 </h>
 
@@ -20,7 +28,7 @@ results from applying the technique of separation of variables to the wave propa
 </p>
 </h>
 
-if one seeks solutions  of the form $\left. U(x,y,t) =  \, u(x,y) \, e^{- i \omega \,t} \right.$, since then the spatial part of $\left. U(x,y,t) \right.$, $\left. u(x,y) \right.$, satisfies (<a href="#Heq">1</a>). Here $\omega$ is the $\it angular\,$ $\it frequency$, $c$ is the speed of sound, $\lambda$ is the wave length and $\left. k= \omega/c \,=2\,\pi/\lambda \right.$  is the number of waves per unit of distance, called $\it wavenumber$.
+if one seeks solutions  of the form $U(x,y,t) =  \ u(x,y) \ e^{- i \omega \ t} $, since then the spatial part of $\left. U(x,y,t) \right.$, $\left. u(x,y) \right.$, satisfies (<a href="#Heq">1</a>). Here $\omega$ is the $\it angular\,$ $\it frequency$, $c$ is the speed of sound, $\lambda$ is the wave length and $\left. k= \omega/c \,=2\,\pi/\lambda \right.$  is the number of waves per unit of distance, called $\it wavenumber$.
 
 Under the assumption that the acoustic wave propagation is linear and also that the amplitude of shear waves in the media are much smaller than the amplitude of the pressure waves, nonlinear effects and shear waves may be neglected.
 
