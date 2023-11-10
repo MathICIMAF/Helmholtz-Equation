@@ -4,64 +4,57 @@
 
 Helmholtz equation:
 
-<h align="center">
-<p class="mathjax"  id="Heq">
+<p id="Heq">
 
-\(-\triangle \ u(x,y) - k^2\ u(x,y)=0 \ \ \ \ (1) \)
-</p>
-</h>
-
-<h align="center">
-<p class="mathjax"  id="Heq">
-
-\left -\triangle \ u(x,y) - k^2\ u(x,y)=0 \ \ \ \ (1) \right
+$$
+\left. -\triangle \ u(x,y) - k^2\ u(x,y)=0 \ \ \ \ (1) \right.
+$$
 
 </p>
-</h>
-
 results from applying the technique of separation of variables to the wave propagation equation in homogeneous media
 
-<h align="center">
-<p class="mathjax"  id="wave">
+<p id="wave">
 
-\(\left.\frac{\partial^2 U(x,y,t)}{\partial t^2} = c^2 \, \triangle \, U(x,y,t) \,\,\,\,(2) \right.\)
+$$
+\left.\frac{\partial^2 U(x,y,t)}{\partial t^2} = c^2 \ \triangle \ U(x,y,t) \ \ \ \ (2) \right.
+$$
+
 </p>
-</h>
 
-if one seeks solutions  of the form $U(x,y,t) =  \ u(x,y) \ e^{- i \omega \ t} $, since then the spatial part of $\left. U(x,y,t) \right.$, $\left. u(x,y) \right.$, satisfies (<a href="#Heq">1</a>). Here $\omega$ is the $\it angular\,$ $\it frequency$, $c$ is the speed of sound, $\lambda$ is the wave length and $\left. k= \omega/c \,=2\,\pi/\lambda \right.$  is the number of waves per unit of distance, called $\it wavenumber$.
+if one seeks solutions  of the form $\left. U(x,y,t) =  \ u(x,y) \ e^{- i \omega \ t} \right.$, since then the spatial part of $\left. U(x,y,t) \right.$, $\left. u(x,y) \right.$, satisfies (<a href="#Heq">1</a>). Here $\omega$ is the $\it angular$ $\it frequency$, $c$ is the speed of sound, $\lambda$ is the wave length and $\left. k= \omega/c \ =2\ \pi/\lambda \right.$  is the number of waves per unit of distance, called $\it wavenumber$.
 
 Under the assumption that the acoustic wave propagation is linear and also that the amplitude of shear waves in the media are much smaller than the amplitude of the pressure waves, nonlinear effects and shear waves may be neglected.
 
-In **HelmholtzEquation** code we consider a simpler $2D$ plane strain model in the $x - y$ plane. The physical $2D$ domain is the semicircle of radius $r$ and center on the origin of coordinates, $\left.\Omega = \{(x, y), y > 0, x^2 +y^2 < r^2\}\right.$. Moreover, we assume that a transducer of width $2a$, with $\left. 0 < a < r \right.$, and flat geometry is located at the origin, see the <a href="#geometry">Figure 1</a>. The transducer emits a pulse of high frequency $f$, with amplitude equal to $\left. C > 0 \right.$. 
+In **HelmholtzEquation** code we consider a simpler $2D$ plane strain model in the $x - y$ plane. The physical $2D$ domain is the semicircle of radius $r$ and center on the origin of coordinates, $\Omega = \{(x, y), y > 0,\ x^2 +y^2 < r^2\}$. Moreover, we assume that a transducer of width $2a$, with $\left. 0 < a < r \right.$, and flat geometry is located at the origin, see the <a href="#geometry">Figure 1</a>. The transducer emits a pulse of high frequency $f$, with amplitude equal to $C > 0$. 
 
-We consider the following  $\it radiation\;$ $\it problem $ 
+We consider the following  $\it radiation$ $\it problem$ 
 
 $$
--\triangle u(x,y) - k^2u(x,y)=0, \;\;\;(x,y)\in \Omega
+\left. -\triangle u(x,y) - k^2u(x,y)=0, \ \ \ (x,y)\in \Omega \right.
 $$
 
 with $\it mixed$ boundary conditions
 
 
 $$
-u(x,y)= C\,\,\, on \,\,\,\,\,\, \Gamma_D
+\left. u(x,y)= C\ \ \  on \ \ \ \ \ \  \Gamma_D \right.
 $$
 
 $$
-\frac{\partial u(x,y)}{\partial \overrightarrow{n}} = 0 \,\,\, on \,\,\,\,\,\, \Gamma_N
+\left. \frac{\partial u(x,y)}{\partial \overrightarrow{n}} = 0 \ \ \  on \ \ \ \ \ \  \Gamma_N \right.
 $$
 
 $$
-\frac{\partial u(x,y)}{\partial \overrightarrow{n}}+ \textrm{i}\, k u(x,y)=0 \,\,\, on \,\,\,\,\,\, \Gamma_R 
+\left. \frac{\partial u(x,y)}{\partial \overrightarrow{n}}+ \textrm{i}\  k u(x,y)=0 \ \ \  on \ \ \ \ \ \  \Gamma_R  \right.
 $$
 
-where $\left. \Gamma_D= \{(x,0), \, |x| \leq a \,\} \right.$ represents the transducer, on $\left. \Gamma_N= \{ (x,0), \, r \geq |x| >a \, \}\right.$ is simulated an acoustically rigid wall,   $\left. \Gamma_R= \{(x,y), \, y>0, x^2+y^2=r^2 \,\}\right.$ corresponds to a non-reflecting boundary, $\textrm{i}$ denotes the imaginary unit and $\overrightarrow{n}$ denotes the normal vector to the boundaries $\Gamma_N$ or $\Gamma_R$. In consequence, the acoustic wave pressure $\left. u(x, y) \right.$ is a complex valued function solution of the Helmholtz equation.
+where $\left. \Gamma_D= \{(x,0), \  |x| \leq a \ \} \right.$ represents the transducer, on $\left. \Gamma_N= \{ (x,0), \  r \geq |x| >a \  \} \right.$ is simulated an acoustically rigid wall,   $\left. \Gamma_R= \{(x,y), \  y>0, x^2+y^2=r^2 \ \} \right.$ corresponds to a non-reflecting boundary, $\textrm{i}$ denotes the imaginary unit and $\overrightarrow{n}$ denotes the normal vector to the boundaries $\Gamma_N$ or $\Gamma_R$. In consequence, the acoustic wave pressure $\left. u(x, y) \right.$ is a complex valued function solution of the Helmholtz equation.
  
 
 The constant wavenumber $k$ is computed as
 
 $$
-\left. k=\frac{2\pi\,f}{c} \right.
+\left. k=\frac{2\pi\ f}{c} \right.
 $$
 
 where $c$ is the ultrasound speed propagation and $f$ frequency of the pulse emitted by the transducer.
@@ -94,7 +87,7 @@ title="Structured quadrilateral mesh."
 </img>
 </a>
 
-**Figure 2:** Mesh generated with Gmsh, for $\left. n= 30\right.$ and $\left.m= 15\right.$.
+**Figure 2:** Mesh generated with Gmsh, for $\left. n= 30 \right.$ and $m= 15$.
 </p>
 
 ## Requirements
@@ -131,7 +124,7 @@ Add the necessary Julia packages to run our main code:
 - Mesh partition $n$ in $X$ direction and $m$ in $Y$ direction.
 
 ## Graphical Output
-For the following parameters $\left. f=1\times10^6 \right.$ Hz, $\left. r= 0.133 \right.$ m, $\left. a=0.01 \right.$ m, $\left. n=476 \right.$ and $\left. m=238 \right.$ (mesh size $\left. h=\lambda/2.48=6.05\cdot 10^{-4} \right.$), the results graphed in <a href="#abs_u_xy" >Figure 3</a> and <a href="#abs_u_0y" >Figure 4</a> were obtained. By default the code uses a pulse of constant amplitude $\left. C=1 \right.$ and the ultrasound speed propagation is constant $\left. c=1500\, m/s \right.$.
+For the following parameters $\left. f=1\times10^6 \right.$ Hz, $\left. r= 0.133 \right.$ m, $\left. a=0.01 \right.$ m, $\left. n=476 \right.$ and $\left. m=238 \right.$ (mesh size $\left. h=\lambda/2.48=6.05\cdot 10^{-4} \right.$), the results graphed in <a href="#abs_u_xy" >Figure 3</a> and <a href="#abs_u_0y" >Figure 4</a> were obtained. By default the code uses a pulse of constant amplitude $\left. C=1 \right.$ and the ultrasound speed propagation is constant $c=1500$ m/s.
 
 For these images we used the [ParaView](https://www.paraview.org/) software.
 
@@ -145,7 +138,7 @@ title="Absolute value of the FEM solution, |u(x,y)|."
 </img>
 </a>
 
-**Figure 3:** Absolute value of the FEM solution, $\left. |u(x,y)| \right.$.
+**Figure 3:** Absolute value of the FEM solution, $|u(x,y)|$.
 </p>
 
 
@@ -159,7 +152,7 @@ title="Absolute value of the FEM solution on the line X=0, |u(0,y)|."
 </img>
 </a>
 
-**Figure 4:** Absolute value of the FEM solution on the line X=0, $\left. |u(0,y)| \right.$.
+**Figure 4:** Absolute value of the FEM solution on the line $X=0$, $|u(0,y)|$.
 </p>
 
 ## Note
