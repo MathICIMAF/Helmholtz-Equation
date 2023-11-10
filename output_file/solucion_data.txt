@@ -1,0 +1,2 @@
+|	f(MHz)	|	K_Wave	|	 Degree_Freedom	|	Iteration	|	min(Residual)	|	ILU_time(sec)	|	GMRES_time(sec)	|	total_time(sec)	|
+|	750000.0	|	3141.5926535897934	|	402236	|	467	|	0.00010271614933993126	|	30.516	|	1315.282	|	1353.266	|
