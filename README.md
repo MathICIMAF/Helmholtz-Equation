@@ -167,6 +167,7 @@ julia main.jl
 [**Institute of Cybernetics, Mathematics and Physics; Havana, Cuba**](http://www.icimaf.cu)
 
 ##Acknowledgments
+
 Special thanks to [Domenico Lahaye](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/lahaye-djp?0%5BL%5D=&cHash=8a49b66cff8f5d09cf02337a0f9638b4), DIAM Delft University, for his advices concerning Julia language as well as the use of Complex Shifted Laplacian Preconditioner. 
 
 
